@@ -6,7 +6,7 @@ import org.example.refactor.shape.ShapeStrategy;
 import org.example.refactor.shape.TriangleShape;
 
 /**
- * Clase para manejar la calculadora de figuras
+ * Clase para manejar la calculadora de figuras. De acuerdo a Single Responsability Principle
  */
 public class ShapeCalculator {
 
@@ -14,6 +14,12 @@ public class ShapeCalculator {
     private final String SHAPE_RECTANGLE = "rectangle";
     private final String SHAPE_TRIANGLE = "triangle";
 
+    /**
+     * Esta clase utliza el patron Strategy para manejar los distintos algoritmos
+     * @param shape
+     * @param dimensions
+     * @return
+     */
     public double calculateArea(String shape, double... dimensions) {
         ShapeStrategy strategy;
         if(shape.equals(SHAPE_CIRCLE)) {

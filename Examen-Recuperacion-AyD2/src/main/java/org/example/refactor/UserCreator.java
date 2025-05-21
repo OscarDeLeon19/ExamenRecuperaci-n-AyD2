@@ -10,6 +10,7 @@ import org.example.refactor.user.UserException;
  */
 public class UserCreator {
 
+    // Este metodo utiliza el patron builder para crear un usuario
     public String createUser(UserDto userDto) throws UserException {
 
         userValidation(userDto);
